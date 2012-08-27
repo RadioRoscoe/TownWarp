@@ -158,6 +158,21 @@ public class TownWarp extends JavaPlugin{
 		if (!(sender instanceof Player))
 			return true;
 		Player player = (Player) sender;
+/*		Debug Command */
+		if (commandLabel.equalsIgnoreCase("twdebug")){
+			player.sendMessage(player.getName());
+			if (player.isOp()){
+			player.sendMessage("isOp");		
+			}
+			if (player.hasPermission("TW.mod")){
+			player.sendMessage("TW.mod");	
+			}
+			if (player.hasPermission("TW.use")){
+			player.sendMessage("TW.use");	
+			}
+			player.sendMessage("player world: " + player.getLocation().getWorld());
+			player.sendMessage("tw world: " + l.getWorld());
+		}
 //		if (player.getName().equalsIgnoreCase("sergeantmajorme") && commandLabel.equalsIgnoreCase("townwarp"))
 //			if(player.isOp())//Debug---REMOVE
 //				player.setOp(false);
