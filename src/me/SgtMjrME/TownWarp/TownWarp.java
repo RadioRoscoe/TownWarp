@@ -302,7 +302,9 @@ public class TownWarp extends JavaPlugin{
 		{
 			if (l.getWorld() != null){
 				player.teleport(l);
-				player.sendMessage(ChatColor.GRAY + "Teleporting...");
+				/* not seeing the teleport msg, so took the color out to test...  */
+				player.sendMessage("Teleporting...");
+//				player.sendMessage(ChatColor.GRAY + "Teleporting...");
 			}
 			return true;
 		}
